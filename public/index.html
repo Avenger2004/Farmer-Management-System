@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Farmer Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🌾 Farmer Management System</h1>
+
+  <section class="form-section">
+    <h2>Add New Farmer</h2>
+    <form id="farmerForm">
+      <input type="text" id="name" placeholder="Farmer Name" required>
+      <input type="number" id="age" placeholder="Age">
+      <input type="text" id="location" placeholder="Location">
+      <input type="text" id="phone" placeholder="Phone">
+      <button type="submit">Add Farmer</button>
+    </form>
+  </section>
+
+  <section class="table-section">
+    <h2>All Farmers</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Location</th>
+          <th>Phone</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="farmerTable">
+        <!-- Farmer rows will be dynamically inserted here with Update and Delete buttons in Actions column -->
+      </tbody>
+    </table>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
