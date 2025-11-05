@@ -5,6 +5,7 @@ require('dotenv').config();
 const connection = mysql.createConnection({
   uri: process.env.DATABASE_URL,
   ssl: {
+    ca: fs.readFileSync(__dirname + '/ca.pem'),
     rejectUnauthorized: true
   }
 });
