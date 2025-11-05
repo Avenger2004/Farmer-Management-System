@@ -1,4 +1,4 @@
-const API_URL = "https://farmer-management-system-duyj.onrender.com/";
+const API_URL = "https://farmer-management-system-duyj.onrender.com/api/farmers";
 
 // Add Farmer
 document.getElementById("farmerForm").addEventListener("submit", async (e) => {
