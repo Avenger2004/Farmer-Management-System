@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/farmers";
+const API_URL = "https://farmer-management-system-duyj.onrender.com/farmers";
 
 // Add Farmer
 document.getElementById("farmerForm").addEventListener("submit", async (e) => {
