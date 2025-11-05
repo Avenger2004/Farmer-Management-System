@@ -1,10 +1,12 @@
 const mysql = require('mysql2');
+require('dotenv').config();
 
+// Create connection using DATABASE_URL from .env
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  port: 3306
+  uri: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: true
+  }
 });
 
 // Create database if it doesn't exist
@@ -12,7 +14,7 @@ connection.query('CREATE DATABASE IF NOT EXISTS farmerDB', (err) => {
   if (err) throw err;
   console.log('✅ Database farmerDB is ready');
 
-  // Now connect to the database
+  // Now connect to the new database
   connection.changeUser({ database: 'farmerDB' }, (err) => {
     if (err) throw err;
     console.log('✅ MySQL connected to farmerDB');
